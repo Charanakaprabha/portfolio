@@ -1,0 +1,122 @@
+.footer-wrapper {
+  background-color: #e5e5e5; /* The light gray color seen at the very bottom of the image */
+  padding-bottom: 20px;
+}
+
+.footer-main {
+  background-color: #315cd5; /* The rich blue brand color */
+  padding: 60px 0;
+  border-radius: 20px;
+  border: 10px solid #fff;
+  color: #fff;
+}
+
+.footer-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 2fr;
+  gap: 30px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.footer-logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.footer-logo-text-top, .footer-logo-text-bottom {
+  font-family: var(--font-heading, monospace);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: monospace, sans-serif; /* Adding monospace for that technical look from the reference */
+  font-size: 0.95rem;
+}
+
+.footer-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.pink-square {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #ff91a4; /* The pink accent color */
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-column a:hover {
+  opacity: 0.7;
+}
+
+.footer-column p {
+  color: #fff;
+  margin: 0;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  background-color: #e5e5e5;
+  color: #315cd5; /* Blue text on gray background */
+  font-family: monospace, sans-serif;
+  font-size: 0.85rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .footer-content-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-main {
+    margin: 0;
+    border-radius: 0;
+    padding: 40px 20px;
+  }
+}

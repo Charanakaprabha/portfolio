@@ -1,0 +1,64 @@
+.marquee-section {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2; /* Light gray matching the reference image */
+  padding: 60px 0; /* Increased padding for more height */
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.marquee-scroll-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-grow: 1;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 100px; /* Kept large gaps between items */
+  align-items: center;
+  animation: scroll-marquee 60s linear infinite; /* Increased duration for smooth and steady, less fast */
+  padding-left: 50px;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #315cd5; /* Logos and text are blue like the reference */
+  flex-shrink: 0;
+}
+
+.marquee-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.marquee-text {
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: lowercase; /* Matching style of logos in image */
+  letter-spacing: -0.5px;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll halfway assuming duplicated content */
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-section {
+    padding: 40px 0;
+  }
+  
+  .marquee-track {
+    animation-duration: 40s; /* Steady on mobile */
+  }
+}

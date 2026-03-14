@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;500;600&family=K2D:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-blue: #116DFF;
+  --dark-blue: #0b1c4a;
+  --accent-pink: #C7306C;
+  --neutral-gray: #F2F2F2;
+  --white: #FFFFFF;
+  --black: #000000;
+  
+  --font-heading: 'Azeret Mono', monospace;
+  --font-secondary: 'K2D', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--dark-blue); /* Base background before image */
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='white' stroke='%23116DFF' stroke-width='2' stroke-linejoin='round' d='M5 3 l0 15 l4 -4 l6 0 Z' filter='drop-shadow(2px 2px 0px %230b1c4a)'/%3E%3C/svg%3E"), auto;
+}
+
+/* Base cursor for pointer elements to override default hand cursor */
+a, button, [role="button"], input[type="submit"], input[type="reset"], input[type="button"] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='white' stroke='%23116DFF' stroke-width='2' stroke-linejoin='round' d='M5 3 l0 15 l4 -4 l6 0 Z' filter='drop-shadow(2px 2px 0px %230b1c4a)'/%3E%3C/svg%3E"), pointer;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--white);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+.text-blue {
+  color: var(--primary-blue);
+}
+
+.text-pink {
+  color: var(--accent-pink);
+}
+
+/* Global Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Button Styles */
+.btn {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #0b51c5;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-blue);
+}

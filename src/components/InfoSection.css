@@ -1,0 +1,59 @@
+.info-section {
+  padding: 8rem 0;
+  background-color: var(--dark-blue);
+}
+
+.info-header {
+  margin-bottom: 4rem;
+}
+
+.info-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  color: var(--accent-pink);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.info-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-desc {
+  font-family: var(--font-body);
+  color: var(--neutral-gray);
+  line-height: 1.6;
+}

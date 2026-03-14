@@ -1,0 +1,107 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('/assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  padding-top: 5rem;
+  /* Account for navbar */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.hero-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.title-primary {
+  color: var(--primary-blue);
+}
+
+.hero-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  max-width: 600px; /* Increased to prevent overlap */
+  color: var(--neutral-gray);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 3rem;
+  flex-wrap: wrap; /* Let buttons wrap on small screens instead of overflowing */
+}
+
+.floating-objects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.obj-monitor {
+  position: absolute;
+  right: 15%;
+  top: 30%;
+  width: 350px;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+}
+
+.obj-ball-pink {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  width: 80px;
+}
+
+.obj-ball-green {
+  position: absolute;
+  right: 35%;
+  bottom: 20%;
+  width: 100px;
+}
+
+.obj-ball-yellow {
+  position: absolute;
+  left: 45%;
+  top: 25%;
+  width: 60px;
+}
+
+/* Specific button in hero section */
+.hero-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .obj-monitor {
+    right: 5%;
+    width: 250px;
+    opacity: 0.5;
+    /* Fade out slightly on mobile so text is readable */
+    z-index: 1;
+  }
+}

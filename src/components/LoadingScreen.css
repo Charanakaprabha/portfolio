@@ -1,0 +1,57 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  height: 100px;
+}
+
+.loading-logo-wrapper {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.loading-text-wrapper {
+  position: absolute;
+  margin-left: 20px; /* Offset to sit next to the shifted logo */
+  z-index: 1;
+}
+
+.loading-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  padding-left: 10px;
+}
+
+.loading-text-top, .loading-text-bottom {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
