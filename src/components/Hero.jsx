@@ -22,7 +22,7 @@ const Hero = () => {
 
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-secondary hero-btn">Explore Projects</a>
-            <a href="#" className="btn btn-primary hero-btn" target="_blank" rel="noopener noreferrer">My Resume</a>
+            <a href="/assets/Resume.pdf" className="btn btn-primary hero-btn" target="_blank" rel="noopener noreferrer">My Resume</a>
           </div>
         </motion.div>
       </div>

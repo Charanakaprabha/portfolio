@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { X } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -42,18 +44,32 @@ const Navbar = () => {
         </a>
       </div>
 
-      <div className="navbar-center">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
+      <div className={`navbar-center ${isOpen ? 'mobile-open' : ''}`}>
+        <button className="mobile-close-btn" onClick={() => setIsOpen(false)} aria-label="Close Menu">
+          <X size={30} />
+        </button>
+        <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+        <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
+        <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
+        <a href="#experience" onClick={() => setIsOpen(false)}>Experience</a>
+        <div className="mobile-only-contact">
+          <a href="#contact" className="btn btn-primary get-in-touch-btn" onClick={() => setIsOpen(false)}>
+            <span className="btn-square"></span>
+            Get In Touch
+          </a>
+        </div>
       </div>
 
       <div className="navbar-right">
-        <a href="#contact" className="btn btn-primary get-in-touch-btn" style={{ textDecoration: 'none' }}>
+        <a href="#contact" className="btn btn-primary get-in-touch-btn desktop-only" style={{ textDecoration: 'none' }}>
           <span className="btn-square"></span>
           Get In Touch
         </a>
+        <button className={`hamburger ${isOpen ? 'active' : ''}`} onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </motion.nav>
   );

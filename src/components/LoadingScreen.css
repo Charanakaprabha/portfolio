@@ -36,7 +36,8 @@
 
 .loading-text-wrapper {
   position: absolute;
-  margin-left: 20px; /* Offset to sit next to the shifted logo */
+  margin-left: 20px;
+  /* Offset to sit next to the shifted logo */
   z-index: 1;
 }
 
@@ -47,7 +48,8 @@
   padding-left: 10px;
 }
 
-.loading-text-top, .loading-text-bottom {
+.loading-text-top,
+.loading-text-bottom {
   font-family: var(--font-heading, sans-serif);
   font-size: 2rem;
   font-weight: 700;

@@ -98,10 +98,19 @@
 
 @media (max-width: 900px) {
   .obj-monitor {
-    right: 5%;
-    width: 250px;
-    opacity: 0.5;
-    /* Fade out slightly on mobile so text is readable */
-    z-index: 1;
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+  
+  .hero-subtitle {
+     font-size: 1rem;
+     max-width: 100%;
+  }
+
+  .obj-ball-pink, .obj-ball-green, .obj-ball-yellow {
+    scale: 0.6;
   }
 }

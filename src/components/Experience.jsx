@@ -5,24 +5,31 @@ import './Experience.css';
 const experiences = [
   {
     id: 1,
-    role: "Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    duration: "2023 - Present",
-    desc: "Led the development of a cloud-based SaaS platform using React and Node.js. Improved system efficiency and reduced server costs by 20% through code optimization."
+    role: "Full-Stack Developer",
+    company: "HTS Company",
+    duration: "Feb 2026 - Present",
+    desc: "Designed and developed full-stack web applications using modern backend technologies, and integrated AI-powered chatbots through APIs to enhance user interaction."
   },
   {
     id: 2,
-    role: "Data Analyst Intern",
-    company: "DataWorks Analytics",
-    duration: "2022 - 2023",
-    desc: "Analyzed large datasets to uncover actionable business metrics. Created automated ETL pipelines substituting manual Excel work, saving 15 hours weekly."
+    role: "Co-Founder",
+    company: "vexamo",
+    duration: "Jan 2026 - Present",
+    desc: "From websites and web applications to branding and UI/UX — we help businesses build products that look premium, work flawlessly, and scale with confidence."
   },
   {
     id: 3,
-    role: "AI/ML Researcher",
-    company: "University Lab",
-    duration: "2021 - 2022",
-    desc: "Researched and implemented deep learning models for image recognition. Published an internal paper on neural network efficiency improvements."
+    role: "Backend Development Team Lead",
+    company: "Kalam Foundation",
+    duration: "Jan 2026 - Mar 2026",
+    desc: "Backend Development Lead at Kalam Foundation, responsible for guiding the backend development team, designing scalable server-side solutions, and technical execution."
+  },
+  {
+    id: 4,
+    role: "Web Developer Intern",
+    company: "Kalam Foundation",
+    duration: "Dec 2025 - Jan 2026",
+    desc: "Working as a Web Developer Intern at Kalam Foundation and actively Involving in Development and Maintenance of Kalam Foundation Web-Site."
   }
 ];
 
@@ -40,10 +47,22 @@ const Experience = () => {
             <motion.div 
               key={exp.id}
               className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
+              initial={{ 
+                opacity: 0, 
+                x: idx % 2 === 0 ? -80 : 80,
+                y: 20
+              }}
+              whileInView={{ 
+                opacity: 1, 
+                x: 0,
+                y: 0
+              }}
+              viewport={{ once: true, margin: "-10px" }}
+              transition={{ 
+                duration: 0.8, 
+                ease: [0.25, 1, 0.5, 1], // Custom cubic-bezier for a smooth 'coming' feel
+                delay: idx * 0.1 
+              }}
             >
               <div className="timeline-content">
                 <h3 className="timeline-role">{exp.role}</h3>

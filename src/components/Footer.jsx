@@ -29,19 +29,17 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4 className="footer-heading"><span className="pink-square"></span> FOLLOW US</h4>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer">X (Twitter)</a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+            <h4 className="footer-heading"><span className="pink-square"></span> FOLLOW ME</h4>
+            <a href="https://www.linkedin.com/in/charanbheesetty" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/Charanakaprabha" target="_blank" rel="noreferrer">GitHub</a>
           </div>
 
           <div className="footer-column">
             <h4 className="footer-heading"><span className="pink-square"></span> CONTACT</h4>
-            <p>123 Fake Street</p>
+            <p>Visakhapatnam,</p>
             <p>Andhra Pradesh, India</p>
-            <p>123-456-7890</p>
-            <p>charan.bheesetty@example.com</p>
+            <p>+91 80740 84493</p>
+            <p>charansaiprabhakumarbheesetty@gmail.com</p>
           </div>
 
         </div>

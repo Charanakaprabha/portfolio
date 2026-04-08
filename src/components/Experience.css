@@ -119,4 +119,8 @@
   .timeline-item.left::after, .timeline-item.right::after {
     left: 21px;
   }
+
+  .timeline-desc {
+    display: none;
+  }
 }
