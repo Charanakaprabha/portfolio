@@ -1,5 +1,6 @@
 .projects-section {
-  padding: 80px 0; /* Reduced height from 100px */
+  padding: 80px 0;
+  /* Reduced height from 100px */
   background-color: var(--dark-bg);
   position: relative;
   overflow: hidden;
@@ -16,7 +17,10 @@
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
+  /* Allow wrapping on very small screens */
 }
+
 
 .mode-btn {
   background: rgba(255, 255, 255, 0.05);
@@ -98,7 +102,8 @@
 }
 
 .project-card.active {
-  flex: 0 0 calc(60% - 20px); /* Expands horizontally */
+  flex: 0 0 calc(60% - 20px);
+  /* Expands horizontally */
   min-width: 600px;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -107,25 +112,27 @@
 
 /* On mobile, full width active and inactive */
 @media (max-width: 768px) {
+  .projects-carousel {
+    padding: 10px 5px;
+    gap: 10px;
+  }
+
   .project-card {
-    flex: 0 0 80%;
+    flex: 0 0 85%;
+    min-width: 260px;
+  }
+
+  .project-card.active {
+    flex: 0 0 95%;
     min-width: 280px;
   }
-  .project-card.active {
-    flex: 0 0 90%;
-    min-width: 320px;
-  }
+
   .carousel-btn {
-    display: flex; /* Show navigation on mobile */
-    scale: 0.8;
-  }
-  .carousel-btn.left {
-    left: 5px;
-  }
-  .carousel-btn.right {
-    right: 5px;
+    display: none;
+    /* Hide side buttons on mobile to avoid overflow and encourage swipe/tap */
   }
 }
+
 
 .project-inner {
   display: flex;
@@ -185,12 +192,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 3;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .deployed-badge,
 .not-deployed-badge {
-  background: rgba(255, 69, 0, 0.9); /* Reddish-Orange tint */
+  background: rgba(255, 69, 0, 0.9);
+  /* Reddish-Orange tint */
 }
 
 .not-deployed-placeholder {

@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import './Experience.css';
 
 const experiences = [
@@ -34,8 +34,20 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end end"]
+  });
+
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
-    <section className="experience-section" id="experience">
+    <section className="experience-section" id="experience" ref={containerRef}>
       <div className="container">
         <div className="experience-header">
           <h4 className="section-subtitle">My Journey</h4>
@@ -43,39 +55,56 @@ const Experience = () => {
         </div>
 
         <div className="timeline">
+          {/* Animated Central Line */}
+          <motion.div 
+            className="timeline-line"
+            style={{ scaleY, originY: 0 }}
+          />
+
           {experiences.map((exp, idx) => (
-            <motion.div 
-              key={exp.id}
-              className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`}
-              initial={{ 
-                opacity: 0, 
-                x: idx % 2 === 0 ? -80 : 80,
-                y: 20
-              }}
-              whileInView={{ 
-                opacity: 1, 
-                x: 0,
-                y: 0
-              }}
-              viewport={{ once: true, margin: "-10px" }}
-              transition={{ 
-                duration: 0.8, 
-                ease: [0.25, 1, 0.5, 1], // Custom cubic-bezier for a smooth 'coming' feel
-                delay: idx * 0.1 
-              }}
-            >
-              <div className="timeline-content">
-                <h3 className="timeline-role">{exp.role}</h3>
-                <h4 className="timeline-company">{exp.company}</h4>
-                <div className="timeline-duration">{exp.duration}</div>
-                <p className="timeline-desc">{exp.desc}</p>
-              </div>
-            </motion.div>
+            <div key={exp.id} className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`}>
+              {/* Dot Animation */}
+              <motion.div 
+                className="timeline-dot"
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              />
+
+              <motion.div 
+                className="timeline-content-wrapper"
+                initial={{ 
+                  opacity: 0, 
+                  x: idx % 2 === 0 ? -50 : 50,
+                  y: 20
+                }}
+                whileInView={{ 
+                  opacity: 1, 
+                  x: 0,
+                  y: 0
+                }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  duration: 0.6, 
+                  ease: "easeOut",
+                  delay: idx * 0.1 
+                }}
+              >
+                <div className="timeline-content">
+                  <h3 className="timeline-role">{exp.role}</h3>
+                  <h4 className="timeline-company">{exp.company}</h4>
+                  <div className="timeline-duration">{exp.duration}</div>
+                  <p className="timeline-desc">{exp.desc}</p>
+                </div>
+              </motion.div>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
 };
+
 
 export default Experience;

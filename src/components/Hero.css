@@ -40,7 +40,8 @@
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: 2rem;
-  max-width: 600px; /* Increased to prevent overlap */
+  max-width: 600px;
+  /* Increased to prevent overlap */
   color: var(--neutral-gray);
 }
 
@@ -48,7 +49,8 @@
   display: flex;
   gap: 20px;
   margin-top: 3rem;
-  flex-wrap: wrap; /* Let buttons wrap on small screens instead of overflowing */
+  flex-wrap: wrap;
+  /* Let buttons wrap on small screens instead of overflowing */
 }
 
 .floating-objects {
@@ -96,21 +98,71 @@
   font-size: 1.1rem;
 }
 
+.hero-roles-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.hero-role-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--primary-blue);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 @media (max-width: 900px) {
+  .hero {
+    padding-top: 40px; /* Reduced from 100px */
+  }
+
+  .hero-content {
+    margin-top: -30px; /* Shift content up */
+  }
+
   .obj-monitor {
     display: none;
   }
-  
+
   .hero-title {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-  }
-  
-  .hero-subtitle {
-     font-size: 1rem;
-     max-width: 100%;
+    font-size: clamp(2rem, 12vw, 3.2rem);
   }
 
-  .obj-ball-pink, .obj-ball-green, .obj-ball-yellow {
-    scale: 0.6;
+
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero-roles-container {
+    height: 50px;
+    justify-content: center;
+  }
+
+  .hero-role-text {
+    font-size: 1.4rem;
+  }
+
+  .hero-title-group {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .obj-ball-pink,
+  .obj-ball-green,
+  .obj-ball-yellow {
+    display: none;
   }
 }

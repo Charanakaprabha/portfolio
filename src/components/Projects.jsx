@@ -79,7 +79,7 @@ const projectsList = [
 ];
 
 const Projects = () => {
-  const [items, setItems] = useState(() => projectsList.map(p => ({...p, instanceId: Math.random()})));
+  const [items, setItems] = useState(() => projectsList.map(p => ({ ...p, instanceId: Math.random() })));
   const [isAuto, setIsAuto] = useState(true);
 
   useEffect(() => {
@@ -122,24 +122,24 @@ const Projects = () => {
   return (
     <section className="projects-section" id="projects">
       <div className="container">
-        
+
         <div className="projects-header">
           <h4 className="section-subtitle">Selected Work</h4>
           <h2 className="section-title">MY PROJECTS</h2>
-          
+
           <div className="mode-toggle-container">
-             <button 
-                className={`mode-btn ${isAuto ? 'active' : ''}`} 
-                onClick={() => setIsAuto(true)}
-             >
-                <Play size={16} /> Auto
-             </button>
-             <button 
-                className={`mode-btn ${!isAuto ? 'active' : ''}`} 
-                onClick={() => setIsAuto(false)}
-             >
-                <Pause size={16} /> Manual
-             </button>
+            <button
+              className={`mode-btn ${isAuto ? 'active' : ''}`}
+              onClick={() => setIsAuto(true)}
+            >
+              <Play size={16} /> Auto
+            </button>
+            <button
+              className={`mode-btn ${!isAuto ? 'active' : ''}`}
+              onClick={() => setIsAuto(false)}
+            >
+              <Pause size={16} /> Manual
+            </button>
           </div>
         </div>
 
@@ -152,46 +152,47 @@ const Projects = () => {
             <AnimatePresence mode="popLayout" initial={false}>
               {items.map((project, idx) => {
                 const isActive = idx === 0;
-                
+
                 return (
-                  <motion.div 
+                  <motion.div
                     layout
                     key={`${project.id}-${project.instanceId}`} // New key forces exit/enter
                     className={`project-card ${isActive ? 'active' : ''}`}
-                    initial={{ opacity: 0, scale: 0.8, x: 100 }}
+                    initial={{ opacity: 0, scale: 0.8, x: window.innerWidth < 768 ? 50 : 100 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
-                    exit={{ opacity: 0, scale: 0.8, x: -100 }}
+                    exit={{ opacity: 0, scale: 0.8, x: window.innerWidth < 768 ? -50 : -100 }}
                     transition={{ layout: { type: 'spring', stiffness: 200, damping: 25 }, opacity: { duration: 0.2 } }}
+
                     onClick={() => {
-                        if (isActive) return;
-                        setIsAuto(false);
-                        setItems(prev => {
-                            const arr = [...prev];
-                            const clickedIndex = arr.findIndex(p => p.id === project.id);
-                            // rotate array so clicked is first
-                            const movingPart = arr.splice(0, clickedIndex);
-                            movingPart.forEach(p => p.instanceId = Math.random());
-                            return [...arr, ...movingPart];
-                        });
+                      if (isActive) return;
+                      setIsAuto(false);
+                      setItems(prev => {
+                        const arr = [...prev];
+                        const clickedIndex = arr.findIndex(p => p.id === project.id);
+                        // rotate array so clicked is first
+                        const movingPart = arr.splice(0, clickedIndex);
+                        movingPart.forEach(p => p.instanceId = Math.random());
+                        return [...arr, ...movingPart];
+                      });
                     }}
                   >
                     <div className="project-inner">
                       <div className="project-img-wrapper">
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className="project-img" 
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="project-img"
                           onError={(e) => {
                             e.target.src = "https://via.placeholder.com/600x400/2a2a35/ffffff?text=" + project.title.replace(/ /g, '+');
                           }}
                         />
                         {project.deployed ? (
                           <div className="deployed-badge">
-                             <span>Deployed</span>
+                            <span>Deployed</span>
                           </div>
                         ) : (
                           <div className="not-deployed-badge">
-                             <span>Still in Development</span>
+                            <span>Still in Development</span>
                           </div>
                         )}
                         <div className="project-overlay">
@@ -207,7 +208,7 @@ const Projects = () => {
                         <h3 className="project-name">{project.title}</h3>
                         <AnimatePresence>
                           {isActive && (
-                            <motion.p 
+                            <motion.p
                               className="project-desc"
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}

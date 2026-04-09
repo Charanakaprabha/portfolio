@@ -9,7 +9,8 @@
   right: 0;
   z-index: 100;
   background: var(--white);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); /* Soft shadow to separate from white sections */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  /* Soft shadow to separate from white sections */
 }
 
 .navbar-logo a {
@@ -29,7 +30,8 @@
   line-height: 1.1;
 }
 
-.logo-text-top, .logo-text-bottom {
+.logo-text-top,
+.logo-text-bottom {
   font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 500;
@@ -53,7 +55,8 @@
 }
 
 .navbar-center a:hover {
-  background-color: #a3e635; /* Light green */
+  background-color: #a3e635;
+  /* Light green */
   color: var(--dark-blue);
 }
 
@@ -116,7 +119,8 @@
   .navbar-center {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
+    transform: translateX(100%);
     width: 70%;
     height: 100vh;
     background-color: var(--white);
@@ -125,15 +129,21 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-    transition: right 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s;
     z-index: 100;
   }
 
+
   .navbar-center.mobile-open {
-    right: 0;
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
     display: flex;
   }
+
 
   .hamburger {
     display: flex;
@@ -159,13 +169,15 @@
   background-color: var(--primary-blue);
   color: var(--white);
   text-transform: capitalize;
-  font-family: var(--font-heading); /* using Azeret Mono or whatever looks close */
+  font-family: var(--font-heading);
+  /* using Azeret Mono or whatever looks close */
   font-weight: 500;
   letter-spacing: 0px;
 }
 
 .get-in-touch-btn:hover {
-  background-color: #a3e635; /* Light green */
+  background-color: #a3e635;
+  /* Light green */
   color: var(--dark-blue);
 }
 

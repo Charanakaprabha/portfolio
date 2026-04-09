@@ -19,6 +19,11 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--dark-blue); /* Base background before image */
@@ -26,9 +31,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  overflow-x: hidden;
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='white' stroke='%23116DFF' stroke-width='2' stroke-linejoin='round' d='M5 3 l0 15 l4 -4 l6 0 Z' filter='drop-shadow(2px 2px 0px %230b1c4a)'/%3E%3C/svg%3E"), auto;
 }
+
 
 /* Base cursor for pointer elements to override default hand cursor */
 a, button, [role="button"], input[type="submit"], input[type="reset"], input[type="button"] {

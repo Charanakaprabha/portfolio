@@ -7,4 +7,7 @@ export default defineConfig({
   optimizeDeps: {
     force: true, // Forces Vite to clear cache and reload dependencies
   },
+  server: {
+    allowedHosts: true, // Allow external hosts like cloudflare tunnels
+  },
 })
