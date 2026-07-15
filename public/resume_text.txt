@@ -1,0 +1,52 @@
+--- Page 1 ---
+S e p  2 0 2 3  -  J u n e  2 0 2 7
+V i g n a n ’ s  I n s t i t u t e  o f  I n f o r m a t i o n  T e c h n o l o g y  ( V I I T ) V i s a k h a p a t n a m ,  I n d i a
+B . T e c h  i n  C o m p u t e r  S c i e n c e  &  E n g i n e e r i n g  ( C G P A :  9 . 1 0 )
+H T S  ( H a l f t o n e  S y s t e m s )
+V e x a m o
+L i v e  |  G i t H u b  L i n k
+L i v e  |  G i t H u b  L i n k
+G i t H u b  L i n k
+F e b  2 0 2 6  -  M a y  2 0 2 6
+A u g  2 0 2 5  -  P r e s e n t
+C H A R A N  B H E E S E T T Y
+V i s a k h a p a t n a m ,  A n d h r a  P r a d e s h  |  b h e e s e t t y c h a r a n @ g m a i l . c o m  |  + 9 1  8 0 7 4 0 8 4 4 9 3  |  G i t H u b  |  L i n k e d I n
+P o r t f o l i o  |  C o d e C h e f |  C e r t i f i c a t e s
+H y b r i d
+R e m o t e
+F U L L  S T A C K  D E V E L O P E R  
+F R E E L A N C E R
+B u i l t  a  f u l l - s t a c k  w e b  a p p l i c a t i o n  u s i n g  R e a c t ,  N o d e . j s ,  a n d  E x p r e s s . j s  t h a t  i n c l u d e d  a n  A I  c h a t b o t
+p e r s o n a l  a s s i s t a n t  f e a t u r e .
+G a i n e d  h a n d s - o n  e x p e r i e n c e  i n  d o m a i n  i n t e g r a t i o n ,  r e a l - t i m e  w e b s i t e  m o n i t o r i n g ,  A P I
+d e v e l o p m e n t ,  a n d  f u l l - s t a c k  d e p l o y m e n t  d u r i n g  i n t e r n s h i p  a t  H T S .
+B u i l t  m o r e  t h a n  f i v e  r e s p o n s i v e  f u l l - s t a c k  w e b  a p p l i c a t i o n s  a n d  i n t e r a c t i v e  d a s h b o a r d s ,  r e s u l t i n g
+i n  i m p r o v e d  w o r k f l o w  e f f i c i e n c y  a n d  e n h a n c e d  c l i e n t  e n g a g e m e n t  f o r  p r o f e s s i o n a l s  a n d
+e d u c a t i o n a l  i n s t i t u t i o n s .
+P R O F E S S I O N A L  E X P E R I E N C E
+E D U C A T I O N
+T E C H N I C A L  S K I L L S
+C E R T I F I C A T I O N S  A N D  A C H I E V E M E N T S
+C A R G O M A T E  |  L o g i s t i c s  M a n a g e m e n t  P l a t f o r m
+E M E R L A N C E  |  S m a r t  E m e r g e n c y  R e s p o n s e  S y s t e m
+S A I  K U L W A N T H  |  D e g r e e  C o l l e g e  W e b s i t e
+F r o n t e n d :  H T M L ,  C S S ,  J a v a S c r i p t ,  R e a c t ,  R e s p o n s i v e  D e s i g n ,  T a i l w i n d  C S S
+B a c k e n d :  N o d e . j s ,  E x p r e s s . j s ,  R E S T  A P I s ,  J W T  A u t h e n t i c a t i o n
+P r o g r a m m i n g :  P y t h o n ,  J a v a S c r i p t ,  C ,  J a v a
+C i s c o  –  P y t h o n  E s s e n t i a l s  1  &  2 ,  H T M L ,  C S S  &  J a v a S c r i p t  |  E d u S k i l l s  -  A n d r o i d  D e v e l o p m e n t
+1 x  H a c k a t h o n  w i n n e r  a n d  s e c u r e d  t o p  p o s i t i o n s  i n  n a t i o n a l - l e v e l  h a c k a t h o n s ,  i n c l u d i n g  B u i l d
+B h a r a t  t h r o u g h  A I  a n d  e v e n t s  c o n d u c t e d  b y  G o o g l e  D e v e l o p e r  G r o u p s .
+D a t a b a s e  &  C l o u d :  M o n g o D B ,  A m a z o n  W e b  S e r v i c e s ,  G o o g l e  M a p s  A P I  
+T o o l s  &  P l a t f o r m s :  G i t ,  G i t H u b ,  G o o g l e  C o l a b ,  V S  C o d e ,  V e r c e l ,  R e n d e r
+C r a f t e d  a n d  d e p l o y e d  a  r e s p o n s i v e  c o l l e g e  m a n a g e m e n t  w e b s i t e  u s i n g  R e a c t ,  N o d e . j s ,  a n d
+M o n g o D B .  I m p r o v e d  a c c e s s i b i l i t y  a n d  o p t i m i z e d  p e r f o r m a n c e  a c r o s s  m u l t i p l e  d e v i c e s  w h i l e
+i n t e g r a t i n g  m o d e r n  U I  c o m p o n e n t s  a n d  s c a l a b l e  b a c k e n d  f u n c t i o n a l i t y .
+P R O J E C T S
+I t  i s  a  f u l l - s t a c k  l o g i s t i c s  p l a t f o r m  c o n n e c t i n g  t r u c k  o w n e r s  a n d  d e l i v e r y  s e r v i c e  p r o v i d e r s  u s i n g
+R e a c t ,  N o d e . j s ,  E x p r e s s . j s ,  a n d  M o n g o D B .  D e v e l o p e d  r e s p o n s i v e  f r o n t - e n d  i n t e r f a c e s  a n d  s c a l a b l e
+b a c k e n d  A P I s ,  a l o n g  w i t h  a u t h e n t i c a t i o n ,  d a t a b a s e  m a n a g e m e n t ,  a n d  R E S T  A P I  i n t e g r a t i o n  f o r  r e a l -
+t i m e  o p e r a t i o n s .
+B u i l t  a  s m a r t  e m e r g e n c y  r e s p o n s e  s y s t e m  u s i n g  R e a c t ,  N o d e . j s ,  a n d  G o o g l e  M a p s  P l a t f o r m  w i t h
+r e a l - t i m e  a m b u l a n c e  r o u t e  o p t i m i z a t i o n  a n d  a u t o m a t e d  t r a f f i c  s i g n a l  c o n t r o l ,  w h e r e  s i g n a l s  t u r n
+g r e e n  a s  t h e  a m b u l a n c e  a p p r o a c h e s .  W o n  a  h a c k a t h o n  f o r  i n n o v a t i o n  i n  s m a r t  h e a l t h c a r e  a n d
+t r a f f i c  m a n a g e m e n t .
